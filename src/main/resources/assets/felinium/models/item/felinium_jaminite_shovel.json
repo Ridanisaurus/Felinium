@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "felinium:items/felinium_jaminite_shovel"
+  }
+}
