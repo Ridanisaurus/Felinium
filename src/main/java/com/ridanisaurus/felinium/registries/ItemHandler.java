@@ -28,6 +28,7 @@ import com.ridanisaurus.felinium.items.ItemBase;
 import com.ridanisaurus.felinium.util.Reference;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -39,7 +40,8 @@ public class ItemHandler {
   public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
 
   public static void itemInit() {
-    RegistryObject<Item> FELINIUM_JAMINITE_INGOT = ITEMS.register("felinium_jaminite_ingot", ItemBase::new);
-
+    ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
   }
+
+  public static final RegistryObject<Item> FELINIUM_JAMINITE_INGOT = ITEMS.register("felinium_jaminite_ingot", ItemBase::new);
 }

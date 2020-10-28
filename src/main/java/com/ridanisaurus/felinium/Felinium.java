@@ -27,8 +27,6 @@ public class Felinium {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public Felinium() {
-        ItemHandler.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::init);
     }
 
@@ -39,7 +37,7 @@ public class Felinium {
     public static final ItemGroup TAB = new ItemGroup("felinium") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(Items.IRON_INGOT);
+            return new ItemStack(ItemHandler.FELINIUM_JAMINITE_INGOT.get());
         }
     };
 }
