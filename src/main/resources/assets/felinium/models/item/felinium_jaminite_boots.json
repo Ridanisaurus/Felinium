@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "felinium:items/felinium_jaminite_boots"
+  }
+}

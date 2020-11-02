@@ -25,9 +25,11 @@
 package com.ridanisaurus.felinium.registries;
 
 import com.ridanisaurus.felinium.Felinium;
+import com.ridanisaurus.felinium.armor.ArmorTierHelper;
 import com.ridanisaurus.felinium.items.ItemBase;
 import com.ridanisaurus.felinium.tools.ItemTierHelper;
 import com.ridanisaurus.felinium.util.Reference;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -63,6 +65,20 @@ public class ItemHandler {
 
   public static final RegistryObject<HoeItem> FELINIUM_JAMINITE_HOE = ITEMS.register("felinium_jaminite_hoe", () ->
           new HoeItem(ItemTierHelper.FELINIUM_JAMINITE, -10, 7.0f, new Item.Properties().group(Felinium.TAB)));
+
+  // Armor
+  public static final RegistryObject<ArmorItem> FELINIUM_JAMINITE_HELMET = ITEMS.register("felinium_jaminite_helmet", () ->
+          new ArmorItem(ArmorTierHelper.FELINIUM_JAMINITE, EquipmentSlotType.HEAD, new Item.Properties().group(Felinium.TAB)));
+
+  public static final RegistryObject<ArmorItem> FELINIUM_JAMINITE_CHEST = ITEMS.register("felinium_jaminite_chestplate", () ->
+          new ArmorItem(ArmorTierHelper.FELINIUM_JAMINITE, EquipmentSlotType.CHEST, new Item.Properties().group(Felinium.TAB)));
+
+  public static final RegistryObject<ArmorItem> FELINIUM_JAMINITE_LEGGINGS = ITEMS.register("felinium_jaminite_leggings", () ->
+          new ArmorItem(ArmorTierHelper.FELINIUM_JAMINITE, EquipmentSlotType.LEGS, new Item.Properties().group(Felinium.TAB)));
+
+  public static final RegistryObject<ArmorItem> FELINIUM_JAMINITE_BOOTS = ITEMS.register("felinium_jaminite_boots", () ->
+          new ArmorItem(ArmorTierHelper.FELINIUM_JAMINITE, EquipmentSlotType.FEET, new Item.Properties().group(Felinium.TAB)));
+
 
   //public static final RegistryObject<ShieldItem> FELINIUM_JAMINITE_SHIELD = ITEMS.register("felinium_jaminite_shield", () ->
           //new ShieldItem(new Item.Properties().group(Felinium.TAB).maxDamage(336)));
